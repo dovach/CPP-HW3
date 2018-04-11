@@ -9,7 +9,8 @@
 using namespace std;
     
     int Member::counter = 0;
-    
+    int Member::newID = 0;
+
     Member::Member(): id(Member::newID++){
         Member::counter++;
     }
