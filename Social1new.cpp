@@ -30,20 +30,31 @@ using namespace std;
     }
     
      void Member::follow(Member& other){
+         if(other.Getid()==1 && Getid()==0){
+             //cout<<"Avi to follow benny"<<endl;
+             //cout<<"1 means Avi not in bennys follower list: "
+             //<<(find(other.followers.begin(), other.followers.end(), other.Getid()) ==  other.followers.end())<<endl;
+            //  if(other.followers.size()>0){             
+            //     cout<<"benny's first 2 in follower list: "<<other.followers[0]<<" , "<<other.followers[1]<<endl;
+            //  }
+         }
         if (find(other.followers.begin(), other.followers.end(), other.Getid()) ==  other.followers.end()) {
         // other.Getid() not in followers, add it
         other.followers.push_back(Getid());
-        // for (std::vector<char>::const_iterator i = path.begin(); i != path.end(); ++i)
-        // cout << *i << ' ';
         following.push_back(other.Getid());
         }
      }
      void Member::unfollow(Member& other){
-        if (!(find(other.followers.begin(), other.followers.end(), other.Getid()) ==  other.followers.end())) {
+       //  cout<<other.Getid()<<endl;
+       //  cout<<"0 means ID exists in list: "<<(find(other.followers.begin(), other.followers.end(), other.Getid()) ==  other.followers.end())<<endl;
+       // if (find(other.followers.begin(), other.followers.end(), other.Getid()) !=  other.followers.end()) {
+       //                 if(other.followers.size()>0){             
+       //         cout<<"benny's first 2 in follower list: "<<other.followers[0]<<" , "<<other.followers[1]<<endl;
+       //      }
         // other.Getid() in followers, remove it
         other.followers.erase(remove(other.followers.begin(), other.followers.end(), Getid()), other.followers.end());
         following.erase(remove(following.begin(), following.end(), other.Getid()),following.end());
-        }
+        //}
      }
 
 
