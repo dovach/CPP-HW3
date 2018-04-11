@@ -11,8 +11,8 @@ class Member
     static int newID;
     static int counter;
     string name;
-    vector <string> followers;
-    vector <string> following;
+    vector <int> followers;
+    vector <int> following;
 
     Member();
     int Getid();
