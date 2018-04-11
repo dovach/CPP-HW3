@@ -10,7 +10,7 @@ using namespace std;
     
     int Member::counter = 0;
     
-    Member::Member(): id(newID++){
+    Member::Member(): id(Member::newID++){
         Member::counter++;
     }
     int Member::Getid()
