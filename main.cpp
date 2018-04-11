@@ -16,9 +16,9 @@ void test1() {
 }
 
 int main() {
-	cout<<"avi ID: "<<avi.Getid()<<endl;
-	cout<<"beni ID: "<<beni.Getid()<<endl;
-	cout<<"chana ID: "<<chana.Getid()<<endl;
+	//cout<<"avi ID: "<<avi.Getid()<<endl;
+	//cout<<"beni ID: "<<beni.Getid()<<endl;
+	//cout<<"chana ID: "<<chana.Getid()<<endl;
 	cout << avi.numFollowers() << " " << avi.numFollowing() << endl; // 0 0
 	avi.follow(beni);
 	//beni.followers.erase(std::remove(beni.followers.begin(),beni.followers.end(), avi.Getid()), beni.followers.end());
@@ -27,10 +27,10 @@ int main() {
 	cout << beni.numFollowers() << " " << beni.numFollowing() << endl; // 1 0
 	cout << Member::count() << endl; // 3
 	cout << endl;
-cout<<"duplicate follow"<<endl;
+//cout<<"duplicate follow"<<endl;
 	avi.follow(beni); // duplicate follow has no effect
 	cout << avi.numFollowers() << " " << avi.numFollowing() << endl; // 0 1
-	cout<<"unfollow"<<endl;
+	//cout<<"unfollow"<<endl;
 	avi.unfollow(beni);	
 	cout << avi.numFollowers() << " " << avi.numFollowing() << endl; // 0 0
 	cout << endl;

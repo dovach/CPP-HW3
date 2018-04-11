@@ -30,14 +30,15 @@ using namespace std;
     }
     
      void Member::follow(Member& other){
-         if(other.Getid()==1 && Getid()==0){
+         unfollow(other);
+         //if(other.Getid()==1 && Getid()==0){
              //cout<<"Avi to follow benny"<<endl;
              //cout<<"1 means Avi not in bennys follower list: "
              //<<(find(other.followers.begin(), other.followers.end(), other.Getid()) ==  other.followers.end())<<endl;
             //  if(other.followers.size()>0){             
             //     cout<<"benny's first 2 in follower list: "<<other.followers[0]<<" , "<<other.followers[1]<<endl;
             //  }
-         }
+         //}
         if (find(other.followers.begin(), other.followers.end(), other.Getid()) ==  other.followers.end()) {
         // other.Getid() not in followers, add it
         other.followers.push_back(Getid());
